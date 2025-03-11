@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal Portfolio</title>
+    <title>Rohit Thakur - AI Engineering Manager</title>
     <style>
         /* Base styles */
         * {
@@ -132,7 +132,7 @@
         
         .about-content {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 50px;
         }
         
@@ -339,6 +339,58 @@
             background-color: #0055aa;
         }
         
+        /* Education section */
+        .education {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+        
+        .education-card {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .education-card h3 {
+            margin-bottom: 10px;
+            color: #222;
+        }
+        
+        .education-card h4 {
+            margin-bottom: 5px;
+            color: #0066cc;
+        }
+        
+        .education-card .date {
+            color: #777;
+            margin-bottom: 15px;
+        }
+        
+        /* Publications section */
+        .publications {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .publication-item {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .publication-item h3 {
+            margin-bottom: 10px;
+            color: #222;
+        }
+        
+        .publication-item p {
+            color: #555;
+        }
+        
         /* Footer */
         footer {
             padding: 30px 0;
@@ -393,6 +445,93 @@
                 gap: 30px;
             }
         }
+        
+        /* Skill list style */
+        .skill-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .skill-category {
+            margin-bottom: 20px;
+        }
+        
+        .skill-category h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #0066cc;
+        }
+        
+        .skill-category ul {
+            list-style-type: none;
+        }
+        
+        .skill-category ul li {
+            margin-bottom: 5px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .skill-category ul li:before {
+            content: "•";
+            color: #0066cc;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .project-list {
+            margin-top: 20px;
+        }
+        
+        .project-item {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-item h3 {
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+        
+        .project-item ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .project-item ul li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .project-item ul li:before {
+            content: "→";
+            color: #0066cc;
+            position: absolute;
+            left: 0;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background-color: #28a745;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        
+        .download-btn:hover {
+            background-color: #218838;
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </head>
@@ -401,11 +540,13 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Your Name</div>
+                <div class="logo">Rohit Thakur</div>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#publications">Publications</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -416,12 +557,13 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Hi, I'm <span>Your Name</span></h1>
-                <p>A passionate [Your Profession] with expertise in [Your Skills]</p>
+                <h1>Hi, I'm <span>Rohit Thakur</span></h1>
+                <p>AI Engineering Manager with expertise in Deep Learning and Computer Vision</p>
                 <a href="#contact" class="btn">Contact Me</a>
+                <a href="contact.html" class="btn" style="margin-left: 10px;">Get In Touch</a>
             </div>
             <div class="hero-image">
-                <img src="/api/placeholder/400/400" alt="Your Profile Photo">
+                <img src="/api/placeholder/400/400" alt="Rohit Thakur Profile Photo">
             </div>
         </div>
     </section>
@@ -432,33 +574,110 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Hello! I'm a [Your Profession] with [X years] of experience specialized in [Your Specialties]. I'm passionate about [What You're Passionate About] and dedicated to delivering high-quality solutions.</p>
-                    <p>Throughout my career, I've worked with various technologies and methodologies, consistently striving to expand my knowledge and skills. I believe in [Your Work Philosophy or Values].</p>
-                    <p>When I'm not working, you'll find me [Your Hobbies or Interests].</p>
+                    <p>Highly accomplished AI Engineering Manager with 6+ years of comprehensive experience in solving complex technical challenges and implementing innovative AI solutions. Proven track record of driving technological innovation, integrating advanced deep learning technologies, and delivering high-impact results across diverse projects. Expert in Agile methodologies (SAFe) with a strong focus on operational efficiency, strategic AI implementation, and cross-functional team leadership.</p>
+                    
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>C++</li>
+                            <li>SQL</li>
+                            <li>R</li>
+                            <li>Java</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>AI/ML Frameworks</h3>
+                        <ul>
+                            <li>TensorFlow</li>
+                            <li>PyTorch</li>
+                            <li>Keras</li>
+                            <li>OpenCV</li>
+                            <li>ONNX</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Deep Learning Libraries</h3>
+                        <ul>
+                            <li>Pandas</li>
+                            <li>scikit-learn</li>
+                            <li>MediaPipe</li>
+                            <li>YOLOv5/v8</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Development Tools</h3>
+                        <ul>
+                            <li>Git</li>
+                            <li>Docker</li>
+                            <li>MLFlow</li>
+                            <li>Jupyter</li>
+                            <li>Spark</li>
+                            <li>Kafka</li>
+                            <li>Hadoop</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Cloud Platforms</h3>
+                        <ul>
+                            <li>Azure Machine Learning</li>
+                            <li>Google Colab</li>
+                            <li>Kubernetes</li>
+                            <li>Databricks</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Advanced Techniques</h3>
+                        <ul>
+                            <li>LSTM Autoencoders</li>
+                            <li>Energy Optimization</li>
+                            <li>Predictive Maintenance</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="Rohit_Thakur_Resume.pdf" class="download-btn" download><i class="fas fa-download"></i> Download Resume</a>
                 </div>
+                
                 <div class="skills">
                     <div class="skill-item">
-                        <div class="skill-name">Skill 1</div>
+                        <div class="skill-name">AI/ML Development</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Computer Vision</div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 90%;"></div>
                         </div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-name">Skill 2</div>
+                        <div class="skill-name">Python</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">TensorFlow/PyTorch</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Team Leadership</div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 85%;"></div>
                         </div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-name">Skill 3</div>
+                        <div class="skill-name">Agile (SAFe)</div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">Skill 4</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%;"></div>
                         </div>
                     </div>
                 </div>
@@ -473,26 +692,18 @@
             <div class="timeline">
                 <div class="timeline-item left">
                     <div class="timeline-content">
-                        <h3>Job Title</h3>
-                        <h4>Company Name</h4>
-                        <div class="date">Jan 2022 - Present</div>
-                        <p>Describe your role, responsibilities, and achievements. What technologies did you work with? What impact did you make?</p>
+                        <h3>AI Engineering Manager</h3>
+                        <h4>OpenSysNet Co., Ltd.</h4>
+                        <div class="date">May 2022 - Present</div>
+                        <p>Lead a team of 10+ AI engineers, implementing Scaled Agile Framework (SAFe), conducting code reviews, and executing strategic AI initiatives aligned with business objectives.</p>
                     </div>
                 </div>
                 <div class="timeline-item right">
                     <div class="timeline-content">
-                        <h3>Job Title</h3>
-                        <h4>Company Name</h4>
-                        <div class="date">Jun 2019 - Dec 2021</div>
-                        <p>Describe your role, responsibilities, and achievements. What technologies did you work with? What impact did you make?</p>
-                    </div>
-                </div>
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3>Job Title</h3>
-                        <h4>Company Name</h4>
-                        <div class="date">Jan 2017 - May 2019</div>
-                        <p>Describe your role, responsibilities, and achievements. What technologies did you work with? What impact did you make?</p>
+                        <h3>Research & Development Engineer</h3>
+                        <h4>Pittasoft Co., Ltd.</h4>
+                        <div class="date">September 2017 - April 2022</div>
+                        <p>Led development of Advanced Driver Assistance Systems (ADAS), Driver Monitoring Systems (DMS), and sophisticated image processing solutions.</p>
                     </div>
                 </div>
             </div>
@@ -502,32 +713,97 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <img src="/api/placeholder/400/200" alt="Project 1">
-                    <div class="project-info">
-                        <h3>Project Title</h3>
-                        <p>Brief description of the project, including technologies used and your role.</p>
-                        <a href="#" class="btn">View Project</a>
-                    </div>
+            <h2 class="section-title">Key Projects</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3>Pantograph Monitoring System (PMS)</h3>
+                    <ul>
+                        <li>Led development of real-time fault detection system for railway infrastructure</li>
+                        <li>Achieved 95.5% accuracy in detecting arcing and contact point misalignments</li>
+                        <li>Integrated YOLOv8 and edge processing for proactive maintenance</li>
+                        <li>Reduced potential safety risks and maintenance costs</li>
+                    </ul>
                 </div>
-                <div class="project-card">
-                    <img src="/api/placeholder/400/200" alt="Project 2">
-                    <div class="project-info">
-                        <h3>Project Title</h3>
-                        <p>Brief description of the project, including technologies used and your role.</p>
-                        <a href="#" class="btn">View Project</a>
-                    </div>
+                
+                <div class="project-item">
+                    <h3>Golf Swing Analysis System</h3>
+                    <ul>
+                        <li>Developed advanced deep learning model for comprehensive golf swing detection</li>
+                        <li>Implemented cutting-edge computer vision techniques</li>
+                        <li>Measured accuracy using Mean Per Joint Position Error (MPJPE) and Precision Confidence Evaluation (PCE)</li>
+                        <li>Created a sophisticated system for athletic performance tracking</li>
+                    </ul>
                 </div>
-                <div class="project-card">
-                    <img src="/api/placeholder/400/200" alt="Project 3">
-                    <div class="project-info">
-                        <h3>Project Title</h3>
-                        <p>Brief description of the project, including technologies used and your role.</p>
-                        <a href="#" class="btn">View Project</a>
-                    </div>
+                
+                <div class="project-item">
+                    <h3>Server Fan Speed Optimization Project</h3>
+                    <ul>
+                        <li>Designed innovative energy-efficient optimization algorithms</li>
+                        <li>Leveraged Gradient Boosting algorithms and LSTM (Long Short-Term Memory) models</li>
+                        <li>Developed predictive models for fan speed management</li>
+                        <li>Implemented correlation analysis for energy consumption</li>
+                        <li>Significantly improved server energy efficiency and operational performance</li>
+                    </ul>
                 </div>
+                
+                <div class="project-item">
+                    <h3>Sorting Robot Vision System</h3>
+                    <ul>
+                        <li>Designed and implemented AI-powered object detection system</li>
+                        <li>Achieved 99.5% mAP@50 accuracy in object recognition</li>
+                        <li>Integrated with Mint Robot for automated picking processes</li>
+                        <li>Improved manufacturing operational efficiency by 20%</li>
+                    </ul>
+                </div>
+                
+                <div class="project-item">
+                    <h3>Energy Consumption Prediction and Anomaly Detection</h3>
+                    <ul>
+                        <li>Developed LSTM-based deep learning models for server systems and smart buildings</li>
+                        <li>Deployed LSTM Autoencoder for anomaly detection using Mean Squared Error (MSE) analysis</li>
+                        <li>Achieved 12.3% Mean Absolute Percentage Error (MAPE) in prediction</li>
+                        <li>Identified and mitigated energy inefficiencies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-card">
+                <h3>M.S. in Electrical Engineering & Computer Science</h3>
+                <h4>Gwangju Institute of Science and Technology (GIST)</h4>
+                <div class="date">2017</div>
+                <p>Specialization: Artificial Intelligence and Machine Learning</p>
+                <p>Advanced research in deep learning and computer vision</p>
+            </div>
+            <div class="education-card">
+                <h3>B.Tech. in Electronics and Communication Engineering</h3>
+                <h4>Green Hills Engineering College, Himachal Pradesh, India</h4>
+                <div class="date">2014</div>
+                <p>Focused on signal processing and communication technologies</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="publications">
+        <div class="container">
+            <h2 class="section-title">Publications and Research</h2>
+            <div class="publication-item">
+                <h3>"Energy Consumption Prediction Using LSTM Models"</h3>
+                <p>International Conference on Machine Learning and Applications (ICMLA)</p>
+            </div>
+            <div class="publication-item">
+                <h3>"Concurrent Food Localization and Recognition"</h3>
+                <p>Korean Institute of Communications & Information Sciences (KICS), 2017</p>
+            </div>
+            <div class="publication-item">
+                <h3>"Augmentation of RGB Dataset for Improved Performance on Infrared Classifier"</h3>
+                <p>Electronics & Information Communications Conference, 2016</p>
             </div>
         </div>
     </section>
@@ -539,22 +815,20 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
-                    <p>youremail@example.com</p>
+                    <p>trohit920@gmail.com</p>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
-                    <p>+1 234 567 890</p>
+                    <p>+82-10-2051-5650</p>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <p>Your Location</p>
+                    <p>Seoul, South Korea</p>
                 </div>
             </div>
             <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/rohit-thakur-141287131" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/trohit920" target="_blank"><i class="fab fa-github"></i></a>
             </div>
         </div>
     </section>
@@ -562,7 +836,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+            <p>&copy; 2025 Rohit Thakur. All Rights Reserved.</p>
         </div>
     </footer>
 
