@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rohit Thakur - AI Engineering Manager</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
     <style>
         /* Base styles */
         * {
@@ -19,7 +17,6 @@
             line-height: 1.6;
             color: #333;
             background-color: #f8f9fa;
-            scroll-behavior: smooth;
         }
         
         .container {
@@ -30,17 +27,11 @@
         
         /* Header styles */
         header {
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: #fff;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 10;
-            transition: all 0.3s ease;
-        }
-        
-        header.scrolled {
-            background-color: rgba(255, 255, 255, 0.98);
-            padding: 5px 0;
         }
         
         nav {
@@ -48,18 +39,11 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 0;
-            transition: all 0.3s ease;
         }
         
         .logo {
             font-size: 24px;
             font-weight: 700;
-            color: #0066cc;
-            transition: all 0.3s ease;
-        }
-        
-        .logo:hover {
-            transform: scale(1.05);
         }
         
         .nav-links {
@@ -69,34 +53,17 @@
         
         .nav-links li {
             margin-left: 30px;
-            position: relative;
         }
         
         .nav-links a {
             text-decoration: none;
             color: #333;
             font-weight: 500;
-            transition: all 0.3s ease;
-            padding: 8px 0;
+            transition: color 0.3s;
         }
         
         .nav-links a:hover {
             color: #0066cc;
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background-color: #0066cc;
-            left: 0;
-            bottom: 0;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
         }
         
         /* Hero section */
@@ -105,8 +72,6 @@
             align-items: center;
             padding: 100px 0;
             background-color: #f0f8ff;
-            background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
-            min-height: 80vh;
         }
         
         .hero-content {
@@ -117,72 +82,18 @@
         .hero-image {
             flex: 1;
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
         
         .hero-image img {
             max-width: 100%;
             border-radius: 50%;
-            box-shadow: 0 8px 30px rgba(0, 102, 204, 0.2);
-            transition: all 0.5s ease;
-            border: 5px solid white;
-        }
-        
-        .hero-image img:hover {
-            transform: scale(1.03);
-            box-shadow: 0 15px 40px rgba(0, 102, 204, 0.3);
-        }
-        
-        .hero-image::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            border: 2px solid rgba(0, 102, 204, 0.3);
-            top: -10px;
-            left: -10px;
-            animation: pulse 2s infinite;
-            z-index: -1;
-        }
-        
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                opacity: 0.7;
-            }
-            50% {
-                transform: scale(1.05);
-                opacity: 0.3;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 0.7;
-            }
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
         
         .hero h1 {
             font-size: 48px;
             margin-bottom: 20px;
             color: #222;
-        }
-        
-        .hero h1 span {
-            color: #0066cc;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .hero h1 span::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 5px;
-            background-color: rgba(0, 102, 204, 0.2);
-            bottom: 5px;
-            left: 0;
-            z-index: -1;
         }
         
         .hero p {
@@ -199,32 +110,11 @@
             border-radius: 5px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: 0.5s;
-            z-index: -1;
+            transition: background-color 0.3s;
         }
         
         .btn:hover {
             background-color: #0055aa;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .btn:hover::before {
-            left: 100%;
         }
         
         /* About section */
@@ -238,18 +128,6 @@
             margin-bottom: 50px;
             text-align: center;
             color: #222;
-            position: relative;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 4px;
-            background-color: #0066cc;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
         }
         
         .about-content {
@@ -273,29 +151,18 @@
         .skill-name {
             font-weight: 600;
             margin-bottom: 5px;
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .skill-name span {
-            color: #0066cc;
         }
         
         .skill-bar {
             height: 10px;
             background-color: #e0e0e0;
             border-radius: 5px;
-            overflow: hidden;
-            position: relative;
         }
         
         .skill-progress {
             height: 100%;
-            background: linear-gradient(90deg, #0066cc, #0099ff);
+            background-color: #0066cc;
             border-radius: 5px;
-            position: relative;
-            transition: width 1.5s cubic-bezier(0.1, 0.45, 0.1, 0.85);
-            width: 0;
         }
         
         /* Experience section */
@@ -326,14 +193,6 @@
             position: relative;
             width: 50%;
             box-sizing: border-box;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-        
-        .timeline-item.show {
-            opacity: 1;
-            transform: translateY(0);
         }
         
         .timeline-item::after {
@@ -346,12 +205,6 @@
             border-radius: 50%;
             top: 15px;
             z-index: 1;
-            transition: all 0.3s ease;
-        }
-        
-        .timeline-item:hover::after {
-            background-color: #0066cc;
-            transform: scale(1.2);
         }
         
         .left {
@@ -375,12 +228,6 @@
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .timeline-item:hover .timeline-content {
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-            transform: translateY(-5px);
         }
         
         .timeline-content h3 {
@@ -415,12 +262,11 @@
             border-radius: 5px;
             overflow: hidden;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+            transition: transform 0.3s;
         }
         
         .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
         }
         
         .project-card img {
@@ -447,7 +293,6 @@
         .contact {
             padding: 100px 0;
             background-color: #f0f8ff;
-            background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
         }
         
         .contact-info {
@@ -459,33 +304,16 @@
         
         .contact-item {
             text-align: center;
-            background-color: white;
-            padding: 30px 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            min-width: 200px;
-        }
-        
-        .contact-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
         
         .contact-item i {
-            font-size: 30px;
+            font-size: 24px;
             color: #0066cc;
-            margin-bottom: 15px;
-            transition: all 0.3s ease;
-        }
-        
-        .contact-item:hover i {
-            transform: scale(1.2);
+            margin-bottom: 10px;
         }
         
         .contact-item p {
             color: #555;
-            font-weight: 500;
         }
         
         .social-links {
@@ -497,47 +325,18 @@
         
         .social-links a {
             display: inline-block;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             background-color: #0066cc;
             color: #fff;
             border-radius: 50%;
             text-align: center;
-            line-height: 50px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .social-links a i {
-            position: relative;
-            z-index: 1;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, #002a66, #0077ff);
-            top: 100%;
-            left: 0;
-            transition: all 0.3s ease;
-            z-index: 0;
-        }
-        
-        .social-links a:hover::before {
-            top: 0;
+            line-height: 40px;
+            transition: background-color 0.3s;
         }
         
         .social-links a:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .social-links a:hover i {
-            transform: scale(1.2);
+            background-color: #0055aa;
         }
         
         /* Education section */
@@ -552,30 +351,6 @@
             padding: 30px;
             margin-bottom: 30px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        
-        .education-card::before {
-            content: '';
-            position: absolute;
-            width: 5px;
-            height: 100%;
-            background-color: #0066cc;
-            left: 0;
-            top: 0;
-            transition: all 0.3s ease;
-        }
-        
-        .education-card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
-        
-        .education-card:hover::before {
-            width: 10px;
         }
         
         .education-card h3 {
@@ -605,14 +380,6 @@
             padding: 30px;
             margin-bottom: 20px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            border-left: 3px solid transparent;
-        }
-        
-        .publication-item:hover {
-            border-left: 3px solid #0066cc;
-            transform: translateX(5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
         
         .publication-item h3 {
@@ -630,15 +397,6 @@
             background-color: #222;
             color: #fff;
             text-align: center;
-        }
-        
-        footer p {
-            opacity: 0.8;
-            transition: all 0.3s ease;
-        }
-        
-        footer p:hover {
-            opacity: 1;
         }
         
         /* Responsive styles */
@@ -698,34 +456,12 @@
         
         .skill-category {
             margin-bottom: 20px;
-            transition: all 0.3s ease;
-        }
-        
-        .skill-category:hover {
-            transform: translateX(5px);
         }
         
         .skill-category h3 {
             font-size: 18px;
             margin-bottom: 10px;
             color: #0066cc;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .skill-category h3::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background-color: #0066cc;
-            bottom: -2px;
-            left: 0;
-            transition: width 0.3s ease;
-        }
-        
-        .skill-category:hover h3::after {
-            width: 100%;
         }
         
         .skill-category ul {
@@ -736,12 +472,6 @@
             margin-bottom: 5px;
             padding-left: 20px;
             position: relative;
-            transition: all 0.3s ease;
-        }
-        
-        .skill-category ul li:hover {
-            transform: translateX(5px);
-            color: #0066cc;
         }
         
         .skill-category ul li:before {
@@ -750,11 +480,6 @@
             font-weight: bold;
             position: absolute;
             left: 0;
-            transition: all 0.3s ease;
-        }
-        
-        .skill-category ul li:hover:before {
-            transform: scale(1.5);
         }
         
         .project-list {
@@ -767,14 +492,6 @@
             padding: 25px;
             margin-bottom: 20px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            border-top: 3px solid transparent;
-        }
-        
-        .project-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-            border-top: 3px solid #0066cc;
         }
         
         .project-item h3 {
@@ -789,13 +506,8 @@
         
         .project-item ul li {
             margin-bottom: 8px;
-            padding-left: 25px;
+            padding-left: 20px;
             position: relative;
-            transition: all 0.3s ease;
-        }
-        
-        .project-item ul li:hover {
-            color: #0066cc;
         }
         
         .project-item ul li:before {
@@ -803,11 +515,6 @@
             color: #0066cc;
             position: absolute;
             left: 0;
-            transition: all 0.3s ease;
-        }
-        
-        .project-item ul li:hover:before {
-            left: 5px;
         }
         
         .download-btn {
@@ -818,71 +525,19 @@
             border-radius: 5px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s;
             margin-top: 20px;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        
-        .download-btn:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, #218838, #20c997);
-            z-index: -1;
-            transition: transform 0.5s;
-            transform-origin: 0 0;
-            transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
-            transform: scaleX(0);
         }
         
         .download-btn:hover {
             background-color: #218838;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .download-btn:hover:before {
-            transform: scaleX(1);
-        }
-
-        /* Animations for page elements */
-        .fade-in {
-            animation: fadeIn 1s ease forwards;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .typing-effect {
-            overflow: hidden;
-            border-right: 2px solid #0066cc;
-            white-space: nowrap;
-            margin: 0 auto;
-            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-        }
-        
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: #0066cc }
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </head>
 <body>
     <!-- Header & Navigation -->
-    <header id="header">
+    <header>
         <div class="container">
             <nav>
                 <div class="logo">Rohit Thakur</div>
@@ -901,16 +556,14 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content" data-aos="fade-right" data-aos-delay="200">
-                <h1>Hi, I'm <span class="animate__animated animate__fadeIn">Rohit Thakur</span></h1>
-                <p class="animate__animated animate__fadeIn animate__delay-1s">AI Engineering Manager with expertise in Deep Learning and Computer Vision</p>
-                <div class="animate__animated animate__fadeIn animate__delay-2s">
-                    <a href="#contact" class="btn">Contact Me</a>
-                    <a href="contact.html" class="btn" style="margin-left: 10px;">Get In Touch</a>
-                </div>
+            <div class="hero-content">
+                <h1>Hi, I'm <span>Rohit Thakur</span></h1>
+                <p>AI Engineering Manager with expertise in Deep Learning and Computer Vision</p>
+                <a href="#contact" class="btn">Contact Me</a>
+                <a href="contact.html" class="btn" style="margin-left: 10px;">Get In Touch</a>
             </div>
-            <div class="hero-image" data-aos="fade-left" data-aos-delay="400">
-                <img src="picture.png" alt="Rohit Thakur Profile Photo">
+            <div class="hero-image">
+                <img src="Picture.png" alt="Rohit Thakur Profile Photo">
             </div>
         </div>
     </section>
@@ -918,12 +571,12 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <div class="about-text" data-aos="fade-right" data-aos-delay="200">
+                <div class="about-text">
                     <p>Highly accomplished AI Engineering Manager with 6+ years of comprehensive experience in solving complex technical challenges and implementing innovative AI solutions. Proven track record of driving technological innovation, integrating advanced deep learning technologies, and delivering high-impact results across diverse projects. Expert in Agile methodologies (SAFe) with a strong focus on operational efficiency, strategic AI implementation, and cross-functional team leadership.</p>
                     
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-category">
                         <h3>Programming Languages</h3>
                         <ul>
                             <li>Python</li>
@@ -934,7 +587,7 @@
                         </ul>
                     </div>
                     
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-category">
                         <h3>AI/ML Frameworks</h3>
                         <ul>
                             <li>TensorFlow</li>
@@ -945,7 +598,7 @@
                         </ul>
                     </div>
                     
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+                    <div class="skill-category">
                         <h3>Deep Learning Libraries</h3>
                         <ul>
                             <li>Pandas</li>
@@ -955,7 +608,7 @@
                         </ul>
                     </div>
                     
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="600">
+                    <div class="skill-category">
                         <h3>Development Tools</h3>
                         <ul>
                             <li>Git</li>
@@ -968,7 +621,7 @@
                         </ul>
                     </div>
                     
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="700">
+                    <div class="skill-category">
                         <h3>Cloud Platforms</h3>
                         <ul>
                             <li>Azure Machine Learning</li>
@@ -978,7 +631,7 @@
                         </ul>
                     </div>
                     
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="800">
+                    <div class="skill-category">
                         <h3>Advanced Techniques</h3>
                         <ul>
                             <li>LSTM Autoencoders</li>
@@ -987,10 +640,216 @@
                         </ul>
                     </div>
                     
-                    <a href="Rohit_Thakur_Resume.pdf" class="download-btn" download data-aos="fade-up" data-aos-delay="900"><i class="fas fa-download"></i> Download Resume</a>
+                    <a href="Rohit_Thakur_Resume.pdf" class="download-btn" download><i class="fas fa-download"></i> Download Resume</a>
                 </div>
                 
-                <div class="skills" data-aos="fade-left" data-aos-delay="400">
+                <div class="skills">
                     <div class="skill-item">
-                        <div class="skill-name">
-                            <span>AI/ML Development
+                        <div class="skill-name">AI/ML Development</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Computer Vision</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Python</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">TensorFlow/PyTorch</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Team Leadership</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Agile (SAFe)</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>AI Engineering Manager</h3>
+                        <h4>OpenSysNet Co., Ltd.</h4>
+                        <div class="date">May 2022 - Present</div>
+                        <p>Lead a team of 10+ AI engineers, implementing Scaled Agile Framework (SAFe), conducting code reviews, and executing strategic AI initiatives aligned with business objectives.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>Research & Development Engineer</h3>
+                        <h4>Pittasoft Co., Ltd.</h4>
+                        <div class="date">September 2017 - April 2022</div>
+                        <p>Led development of Advanced Driver Assistance Systems (ADAS), Driver Monitoring Systems (DMS), and sophisticated image processing solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Key Projects</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3>Pantograph Monitoring System (PMS)</h3>
+                    <ul>
+                        <li>Led development of real-time fault detection system for railway infrastructure</li>
+                        <li>Achieved 95.5% accuracy in detecting arcing and contact point misalignments</li>
+                        <li>Integrated YOLOv8 and edge processing for proactive maintenance</li>
+                        <li>Reduced potential safety risks and maintenance costs</li>
+                    </ul>
+                </div>
+                
+                <div class="project-item">
+                    <h3>Golf Swing Analysis System</h3>
+                    <ul>
+                        <li>Developed advanced deep learning model for comprehensive golf swing detection</li>
+                        <li>Implemented cutting-edge computer vision techniques</li>
+                        <li>Measured accuracy using Mean Per Joint Position Error (MPJPE) and Precision Confidence Evaluation (PCE)</li>
+                        <li>Created a sophisticated system for athletic performance tracking</li>
+                    </ul>
+                </div>
+                
+                <div class="project-item">
+                    <h3>Server Fan Speed Optimization Project</h3>
+                    <ul>
+                        <li>Designed innovative energy-efficient optimization algorithms</li>
+                        <li>Leveraged Gradient Boosting algorithms and LSTM (Long Short-Term Memory) models</li>
+                        <li>Developed predictive models for fan speed management</li>
+                        <li>Implemented correlation analysis for energy consumption</li>
+                        <li>Significantly improved server energy efficiency and operational performance</li>
+                    </ul>
+                </div>
+                
+                <div class="project-item">
+                    <h3>Sorting Robot Vision System</h3>
+                    <ul>
+                        <li>Designed and implemented AI-powered object detection system</li>
+                        <li>Achieved 99.5% mAP@50 accuracy in object recognition</li>
+                        <li>Integrated with Mint Robot for automated picking processes</li>
+                        <li>Improved manufacturing operational efficiency by 20%</li>
+                    </ul>
+                </div>
+                
+                <div class="project-item">
+                    <h3>Energy Consumption Prediction and Anomaly Detection</h3>
+                    <ul>
+                        <li>Developed LSTM-based deep learning models for server systems and smart buildings</li>
+                        <li>Deployed LSTM Autoencoder for anomaly detection using Mean Squared Error (MSE) analysis</li>
+                        <li>Achieved 12.3% Mean Absolute Percentage Error (MAPE) in prediction</li>
+                        <li>Identified and mitigated energy inefficiencies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-card">
+                <h3>M.S. in Electrical Engineering & Computer Science</h3>
+                <h4>Gwangju Institute of Science and Technology (GIST)</h4>
+                <div class="date">2017</div>
+                <p>Specialization: Artificial Intelligence and Machine Learning</p>
+                <p>Advanced research in deep learning and computer vision</p>
+            </div>
+            <div class="education-card">
+                <h3>B.Tech. in Electronics and Communication Engineering</h3>
+                <h4>Green Hills Engineering College, Himachal Pradesh, India</h4>
+                <div class="date">2014</div>
+                <p>Focused on signal processing and communication technologies</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="publications">
+        <div class="container">
+            <h2 class="section-title">Publications and Research</h2>
+            <div class="publication-item">
+                <h3>"Energy Consumption Prediction Using LSTM Models"</h3>
+                <p>International Conference on Machine Learning and Applications (ICMLA)</p>
+            </div>
+            <div class="publication-item">
+                <h3>"Concurrent Food Localization and Recognition"</h3>
+                <p>Korean Institute of Communications & Information Sciences (KICS), 2017</p>
+            </div>
+            <div class="publication-item">
+                <h3>"Augmentation of RGB Dataset for Improved Performance on Infrared Classifier"</h3>
+                <p>Electronics & Information Communications Conference, 2016</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>trohit920@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+82-10-2051-5650</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Seoul, South Korea</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/rohit-thakur-141287131" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/trohit920" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Rohit Thakur. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
